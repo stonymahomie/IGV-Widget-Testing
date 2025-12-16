@@ -4,64 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IGV Widget Test</title>
-    
-    <!-- IGV.js Bibliothek von CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/igv@2.15.0/dist/igv.min.js"></script>
-    
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        h1 {
-            color: #333;
-            margin-bottom: 20px;
-        }
-        
-        #igv-container {
-            width: 100%;
-            height: 500px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>IGV Widget Anzeige</h1>
-        <div id="igv-container"></div>
-    </div>
-    
-    <script>
-        // IGV Widget Initialisierung
-        document.addEventListener('DOMContentLoaded', function() {
-            var igvDiv = document.getElementById('igv-container');
-            
-            var options = {
-                genome: "hg38",
-                locus: "chr8:127,735,434-127,745,434"
-            };
-            
-            igv.createBrowser(igvDiv, options)
-                .then(function(browser) {
-                    console.log("IGV Browser erfolgreich geladen");
-                })
-                .catch(function(error) {
-                    console.error("Fehler beim Laden des IGV Browsers:", error);
-                });
-        });
-    </script>
+    <header class="demo-header">
+        <div class="container header-inner">
+            <h2>Demo — Beispieleinbindung Widget</h2>
+            <nav class="demo-nav">
+                <a href="#">Home</a> 
+                <span class="sep">|</span> 
+                <a href="#">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <main class="site-main">
+
+        <section class="container site-begin">
+            <h3>Ihre Website (Platzhalter)</h3>
+            <p>Hier befindet sich Ihre eigene Website.</p>
+        </section>
+
+        
+        <!---------------------------
+        WIDGET-BEREICH START
+        ----------------------------->
+
+
+        <section class="my_widget_container">
+            <h1>Widget (Text editierbar)</h1>
+            <div id="my_widget_div">
+                <script type="text/javascript" id="vb_93e5434_en_GB">
+                    var app = {
+                        "vbid": "", /* field for adding special partner ID provided by digitalclaim.io */
+                        "back_link_url": "", /* optional redirect URL when claim is finished */
+                        "back_link_label": "" /* optional label for redirect URL button */
+                    };
+                    
+                    function ready(e) {"complete" == document.readyState ? e() : document.addEventListener ? document.addEventListener("DOMContentLoaded", e) : document.attachEvent("onreadystatechange", function() { "complete" == document.readyState && e() })};
+                    serialize = function(obj) {var str = [];for (var p in obj) if (obj.hasOwnProperty(p)) {str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));}return str.join("&");};
+                    ready(function() {var e = document.getElementsByTagName("head")[0];script = document.createElement("script");script.id = 'vbs_93e5434_en_GB';script.type = "text/javascript";script.src = "https://go.antson.io/configurator/widget/load" + "?key=64f6e5c13c3964fb67bad1670ff38c0622e55c2e&app=93e5b2831278df1fe8c298e78f6ce0bd41ffad69&lang=en_GB&" + serialize(app);e.appendChild(script)});
+                    </script>
+            </div>
+        </section>
+
+
+
+        <!---------------------------
+        WIDGET-BEREICH ENDE
+        ----------------------------->
+
+
+        <section class="container site-rest">
+            <h3>Rest Ihrer Website</h3>
+            <p>Weitere Inhalte, Links oder Kontaktinformationen würden hier angezeigt werden.</p>
+        </section>
+
+    </main>
+
+
+
+    <footer class="demo-footer">
+        <div class="container footer-inner">
+            <small>Demo Footer — Beispielunternehmen © 2025</small>
+        </div>
+    </footer>
 </body>
 </html>
