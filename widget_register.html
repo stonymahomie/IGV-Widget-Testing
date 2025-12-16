@@ -1,0 +1,32 @@
+<script type="text/javascript" id="vb_93e5434_en_GB">
+    var app = {
+        "vbid": "", /* field for adding special partner ID provided by digitalclaim.io */
+        "back_link_url": "", /* optional redirect URL when claim is finished */
+        "back_link_label": "" /* optional label for redirect URL button */
+    };
+    
+    function ready(e) {
+        "complete" == document.readyState ? e() : document.addEventListener ? document.addEventListener("DOMContentLoaded", e) : document.attachEvent(
+            "onreadystatechange", function() { 
+                "complete" == document.readyState && e() 
+            }
+        )
+    };
+    
+    serialize = function(obj) {
+        var str = [];for (var p in obj) if (obj.hasOwnProperty(p)) {
+            str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+        }return str.join("&");
+    };
+    
+    ready(function() {
+        var e = document.getElementsByTagName("head")[0];
+        script = document.createElement("script");
+        script.id = 'vbs_93e5434_en_GB';
+        script.type = "text/javascript";
+        script.src = "https://go.antson.io/configurator/widget/load" + 
+            "?key=64f6e5c13c3964fb67bad1670ff38c0622e55c2e&app=93e5b2831278df1fe8c298e78f6ce0bd41ffad69&lang=en_GB&" + 
+            serialize(app);
+        e.appendChild(script)
+    });
+</script>
